@@ -1,0 +1,25 @@
+﻿@model IEnumerable<LibraryCloud.Models.BookViewModel>
+@{
+    ViewBag.Title = "Index";
+
+}
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+    </tr>
+
+    @foreach (var item in ViewBag.books)
+    {
+        <tr>
+            <td>@item.id
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+</table>
